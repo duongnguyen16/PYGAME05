@@ -117,16 +117,8 @@ class Player(pygame.sprite.Sprite):
         #     self.game_over = True
 
 
-class Enemy(pygame.sprite.Sprite):
-    def __init__(self):
-        pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.Surface((75, 75))
-        self.image.fill(GREEN)
-        self.rect = self.image.get_rect()
-        self.rect.topleft = (random.randrange(0, w - 75), random.randrange(0, h - 75))
 
 player_gr = pygame.sprite.Group()
-enemy_gr = pygame.sprite.Group()
 
 player = Player()
 
@@ -143,7 +135,6 @@ while True:
     game_display.blit(map,[0,300])
     player_gr.update()
     player_gr.draw(game_display)
-    enemy_gr.draw(game_display)
 
     clock.tick(60)
     pygame.display.update()
