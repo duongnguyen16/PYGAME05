@@ -99,7 +99,6 @@ class Player(pygame.sprite.Sprite):
             elif key[pygame.K_s] or key[pygame.K_LSHIFT] or key[pygame.K_DOWN]:
                 if not self.state == "duck" and self.jump_state == 0:
                     self.state = "duck"
-                    print("Duck!")
 
         if self.state == "jump" and self. jump_state != 0:
             if self.jump_state == 1:
